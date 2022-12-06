@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-I've used the new nextJs @next/font(beta) component which optimizes the fonts (including custom fonts) and remove external network requests for improved privacy and performance. see [Optimizing Fonts] (https://beta.nextjs.org/docs/optimizing/fonts) to learn more.
+I've used the new nextJs @next/font(beta) component which optimizes the fonts (including custom fonts) and remove external network requests for improved privacy and performance. see: [Optimizing Fonts](https://beta.nextjs.org/docs/optimizing/fonts) to learn more.
 
 ### Continued development
 
