@@ -57,7 +57,7 @@ body {
 
 .rulesBg {
   background-image: url("/images/image-rules-bonus.svg");
-  background-size: 60% 60%;
+  background-size: 100% 100%;
   background-origin: content-box;
   background-repeat: no-repeat;
   background-position: center;
