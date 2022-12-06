@@ -33,6 +33,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Rock Paper Scissors Lizard Spock</title>
         <link rel="icon" href="/images/favicon-32x32.png" />
+        <meta
+          name="description"
+          content="A solution to Rock Paper Scissors Lizard Spock frontend mentor challenge"
+        />
       </Head>
       <RulesComponent showRules={showRules} setShowRules={setShowRules} />
 
