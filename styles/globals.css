@@ -1,3 +1,135 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-backGround: linear-gradient(
+    45deg,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  --scissors-gradient: linear-gradient(
+    45deg,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+
+  --paper-gradient: linear-gradient(
+    45deg,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+  --rock-gradient: linear-gradient(
+    45deg,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+  --lizard-gradient: linear-gradient(
+    45deg,
+    hsl(261, 73%, 60%),
+    hsl(261, 72%, 63%)
+  );
+
+  --cyan-gradient: linear-gradient(
+    45deg,
+    hsl(189, 59%, 53%),
+    hsl(189, 58%, 57%)
+  );
+}
+
+body {
+  background: var(--color-backGround);
+  color: white;
+}
+
+.playDivBg {
+  background-image: url("/images/bg-pentagon.svg");
+  background-size: 80% 80%;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rulesBg {
+  background-image: url("/images/image-rules-bonus.svg");
+  background-size: 60% 60%;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.choiceInside {
+  background-size: 50% 50%;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.choiceOutside {
+  border-radius: 50%;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  @apply border-double  border-transparent;
+}
+
+.lizardBg {
+  background-image: url("/images/icon-lizard.svg");
+}
+
+.lizardBorder {
+  background-image: linear-gradient(white, white), var(--lizard-gradient);
+  box-shadow: 0 3px 3px hsl(261, 73%, 60%);
+}
+
+.paperBg {
+  background-image: url("/images/icon-paper.svg");
+}
+
+.paperBorder {
+  background-image: linear-gradient(white, white), var(--paper-gradient);
+  box-shadow: 0 3px 3px hsl(230, 89%, 62%);
+}
+
+.rockBg {
+  background-image: url("/images/icon-rock.svg");
+}
+
+.rockBorder {
+  background-image: linear-gradient(white, white), var(--rock-gradient);
+  box-shadow: 0 3px 3px hsl(349, 71%, 52%);
+}
+
+.scissorsBg {
+  background-image: url("/images/icon-scissors.svg");
+}
+
+.scissorsBorder {
+  background-image: linear-gradient(white, white), var(--scissors-gradient);
+  box-shadow: 0 3px 3px hsl(39, 89%, 49%);
+}
+
+.spockBg {
+  background-image: url("/images/icon-spock.svg");
+}
+
+.spockBorder {
+  background-image: linear-gradient(white, white), var(--cyan-gradient);
+  box-shadow: 0 3px 3px hsl(189, 59%, 53%);
+}
+
+.header p {
+  @apply h-4 sm:h-6;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

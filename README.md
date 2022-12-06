@@ -1,27 +1,62 @@
-# Next.js + Tailwind CSS Example
+# Frontend Mentor - Rock, Paper, Scissors solution
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Deploy your own
+## Table of contents
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Overview
 
-## How to use
+### The challenge
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Users should be able to:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+- View the optimal layout for the game depending on their device's screen size
+- Play Rock, Paper, Scissors against the computer
+- Maintain the state of the score after refreshing the browser _(optional)_
+- **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+### Screenshot
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+![](https://i.postimg.cc/7LQvk04M/localhost-3000-7.png)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- TypeScript
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - For styles
+
+### What I learned
+
+I've used the new nextJs @next/font(beta) component which optimizes the fonts (including custom fonts) and remove external network requests for improved privacy and performance. see [Optimizing Fonts] (https://beta.nextjs.org/docs/optimizing/fonts) to learn more.
+
+### Continued development
+
+Implement a version that permits to two users to play against each other online.
+
+## Author
+
+- Website - [Adelinked](https://adelinked.netlify.app)
+- Frontend Mentor - [@AAdelinked](https://www.frontendmentor.io/profile/Adelinked)
+- Twitter - [@yourusername](https://twitter.com/AAdelinked)
