@@ -13,7 +13,9 @@ const RulesComponent: React.FC<{
             className="fixed overflow-y-auto bg-white  z-10 top-0 h-screen w-screen flex flex-col items-center sm:h-[60%] sm:w-[60%] sm:top-[25%] sm:max-w-[560px] sm:max-h-[560px] rounded-lg  "
           >
             <div className="flex w-full justify-between items-center p-8 ">
-              <div className="text-darkText text-3xl  sm:w-full ">RULES</div>
+              <div className="text-darkText text-3xl text-center w-full sm:text-left ">
+                RULES
+              </div>
               <div
                 className="cursor-pointer hidden sm:block"
                 onClick={() => setShowRules(false)}
