@@ -1,4 +1,4 @@
-const BgPentagon = () => {
+const LogoBonus = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -39,4 +39,4 @@ const BgPentagon = () => {
   );
 };
 
-export default BgPentagon;
+export default LogoBonus;

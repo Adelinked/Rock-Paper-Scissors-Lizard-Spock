@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
 import { useEffect, useState } from "react";
 import InitiaState from "../components/InitiaState";
@@ -41,12 +40,7 @@ const Home: NextPage = () => {
       <RulesComponent showRules={showRules} setShowRules={setShowRules} />
 
       <header className="flex justify-between border-4 border-headerOutline rounded-md w-80 sm:w-[36rem] lg:w-[44rem] mt-8  ">
-        <div className="header flex items-center p-6 sm:p-8 sm:py-5  ">
-          {/*<p>ROCK</p>
-          <p>PAPER</p>
-          <p>SCISSORS</p>
-          <p>LIZARD</p>
-          <p>SPOCK</p>*/}
+        <div className="header flex  items-center p-6 sm:p-8 sm:py-5  ">
           <LogoBonus />
         </div>
         <div className="p-3 sm:p-6 flex items-center ">
@@ -100,7 +94,7 @@ const Home: NextPage = () => {
                     localStorage.setItem("score", "0");
                   }
                 }}
-                className="px-10 py-4 border-2 text-xl tracking-widest cursor-pointer rounded-lg border-headerOutline hover:text-headerOutline hover:bg-white"
+                className=" px-10 py-4 border-2 text-xl tracking-widest cursor-pointer rounded-lg border-headerOutline hover:text-headerOutline hover:bg-white"
                 title="reset score"
               >
                 RESET
