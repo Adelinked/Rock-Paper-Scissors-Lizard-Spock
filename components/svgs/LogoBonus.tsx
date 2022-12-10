@@ -1,4 +1,4 @@
-const LogoBonus = () => {
+const SVGLogoBonus = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -39,4 +39,4 @@ const LogoBonus = () => {
   );
 };
 
-export default LogoBonus;
+export default SVGLogoBonus;

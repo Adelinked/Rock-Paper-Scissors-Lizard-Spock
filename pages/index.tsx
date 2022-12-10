@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import InitiaState from "../components/InitiaState";
 import ResultState from "../components/ResultState";
 import RulesComponent from "../components/RulesComponent";
-import LogoBonus from "../components/svgs/LogoBonus";
+import LogoBonus from "../components/LogoBonus";
 import evaluateResult from "../utils/game";
 
 const Home: NextPage = () => {
@@ -40,16 +40,16 @@ const Home: NextPage = () => {
       <RulesComponent showRules={showRules} setShowRules={setShowRules} />
 
       <header className="flex justify-between border-4 border-headerOutline rounded-md w-80 sm:w-[36rem] lg:w-[44rem] mt-8  ">
-        <div className="header flex  items-center p-6 sm:p-8 sm:py-5  ">
+        <div className=" flex items-center  p-6 sm:p-8 sm:py-5  ">
           <LogoBonus />
         </div>
         <div className="p-3 sm:p-6 flex items-center ">
           {" "}
-          <div className="bg-white flex flex-col items-center px-6 sm:px-12 py-4 sm:py-6 rounded">
+          <div className="bg-white flex flex-col items-center px-6 sm:px-12 py-3 sm:py-6 rounded ">
             <p className=" text-scoreText tracking-widest text-xs sm:text-xl ">
               SCORE
             </p>
-            <p className=" text-darkText text-5xl sm:text-7xl font-bold">
+            <p className=" text-darkText text-3xl sm:text-7xl font-bold">
               {score}
             </p>
           </div>
