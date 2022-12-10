@@ -24,12 +24,12 @@ const ResultState: React.FC<{
   }, [renderResult]);
 
   const playerInsideClass =
-    "w-[6.5rem] h-[6.5rem]  lg:w-[14.5rem] lg:h-[14.5rem]";
-  const playerOutsideClass = "border-[1.1rem]  lg:border-[2.2rem] ";
+    "w-[6.2rem] h-[6.2rem]  lg:w-[14.5rem] lg:h-[14.5rem]";
+  const playerOutsideClass = "border-[1rem]  lg:border-[2.2rem] ";
   return (
-    <div className="flex items-center  justify-evenly w-full h-full flex-wrap  lg:min-w-[940px] ">
+    <div className="flex items-center  justify-between sm:justify-evenly w-full h-full flex-wrap  lg:min-w-[940px] ">
       <div className="flex flex-col items-center justify-center order-1  ">
-        <p className="order-2 sm:order-1 pt-8 sm:pb-16 tracking-widest text-sm sm:text-2xl ">
+        <p className="order-2 sm:order-1 pt-8 sm:pb-16 tracking-widest text-sm sm:text-xl lg:text-2xl ">
           YOU PICKED
         </p>
         <Choice
@@ -38,9 +38,9 @@ const ResultState: React.FC<{
           halo={renderResult === "WIN"}
         />
       </div>
-      <div className=" flex flex-col items-center justify-center order-3 sm:order-2 h-full   ">
+      <div className=" flex flex-col  items-center justify-center order-3 sm:order-2 w-full h-full sm:w-52  ">
         {renderResult ? (
-          <div className=" w-52 h-full ">
+          <div className=" w-52  ">
             {/*<div className="pt-[90px]" />*/}
             <p className=" w-full  font-bold text-[2.6rem] text-center tracking-widest">
               {renderResult === "DRAW" ? "DRAW" : "YOU " + renderResult}
@@ -59,7 +59,7 @@ const ResultState: React.FC<{
         ) : null}
       </div>
       <div className="  flex flex-col items-center justify-center order-2 sm:order-3 ">
-        <p className="order-2 sm:order-1 pt-8 sm:pb-16 tracking-widest text-sm sm:text-2xl ">
+        <p className="order-2 sm:order-1 pt-8 sm:pb-16 tracking-widest text-sm sm:text-xl lg:text-2xl ">
           THE HOUSE PICKED
         </p>
         <Choice
