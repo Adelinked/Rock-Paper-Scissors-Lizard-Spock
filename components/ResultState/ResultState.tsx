@@ -38,11 +38,11 @@ const ResultState: React.FC<{
           halo={renderResult === "WIN"}
         />
       </div>
-      <div className=" flex flex-col items-center justify-center order-3 sm:order-2  ">
+      <div className=" flex flex-col items-center justify-center order-3 sm:order-2 h-full   ">
         {renderResult ? (
-          <div className=" w-52 h-full">
+          <div className=" w-52 h-full ">
             {/*<div className="pt-[90px]" />*/}
-            <p className="  font-bold text-[2.6rem] text-center tracking-widest">
+            <p className=" w-full  font-bold text-[2.6rem] text-center tracking-widest">
               {renderResult === "DRAW" ? "DRAW" : "YOU " + renderResult}
             </p>
             {/*<div className="pt-[7px]" />*/}
