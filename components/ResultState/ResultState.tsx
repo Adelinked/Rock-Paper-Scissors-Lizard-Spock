@@ -40,9 +40,9 @@ const ResultState: React.FC<{
       </div>
       <div className=" flex flex-col  items-center justify-center order-3 sm:order-2 w-full h-full sm:w-52  ">
         {renderResult ? (
-          <div className=" w-52  ">
+          <div className=" w-56  ">
             {/*<div className="pt-[90px]" />*/}
-            <p className=" w-full  font-bold text-[2.6rem] text-center tracking-widest">
+            <p className=" w-full  font-bold text-[2.6rem] text-center tracking-widest bg-red-500">
               {renderResult === "DRAW" ? "DRAW" : "YOU " + renderResult}
             </p>
             {/*<div className="pt-[7px]" />*/}
