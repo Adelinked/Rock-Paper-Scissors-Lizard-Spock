@@ -42,7 +42,7 @@ const ResultState: React.FC<{
         {renderResult ? (
           <div className=" w-56  ">
             {/*<div className="pt-[90px]" />*/}
-            <p className=" w-full  font-bold text-[2.6rem] text-center tracking-widest bg-red-500">
+            <p className=" w-full  font-bold text-[2.6rem] text-center tracking-widest ">
               {renderResult === "DRAW" ? "DRAW" : "YOU " + renderResult}
             </p>
             {/*<div className="pt-[7px]" />*/}
