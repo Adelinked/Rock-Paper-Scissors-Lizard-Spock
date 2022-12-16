@@ -17,7 +17,7 @@ const RulesComponent: React.FC<{
                 RULES
               </div>
               <div
-                className="cursor-pointer hidden sm:block"
+                className="cursor-pointer hidden sm:block hover:fill-black text-red-500"
                 onClick={() => setShowRules(false)}
               >
                 <IconClose />

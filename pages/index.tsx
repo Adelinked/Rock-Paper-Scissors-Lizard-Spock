@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import InitiaState from "../components/InitiaState";
 import ResultState from "../components/ResultState";
 import RulesComponent from "../components/RulesComponent";
@@ -13,9 +13,10 @@ const Home: NextPage = () => {
   const [showRules, setShowRules] = useState(false);
   const [choice, setChoice] = useState("");
   const [gameState, setGameState] = useState("Initial");
-
+  const count = useRef(0);
   useEffect(() => {
     setScore(Number(localStorage.getItem("score")));
+    count.current = 0;
   }, []);
   useEffect(() => {
     if (choice === "") return;
@@ -23,8 +24,27 @@ const Home: NextPage = () => {
   }, [choice]);
 
   useEffect(() => {
-    if (score === 0) return;
-    localStorage.setItem("score", String(score));
+    count.current++;
+    console.log(count.current);
+    let id: ReturnType<typeof setTimeout>;
+    if (score === 0) {
+      if (localStorage.getItem("score") && count.current > 1)
+        id = setTimeout(() => {
+          const loseEmojis = ["🙈", "😀", "🙉", "🙃"];
+          const random = Math.floor(Math.random() * loseEmojis.length);
+          alert(`Your score is zero ${loseEmojis[random]}, try again!`);
+        }, 20);
+    }
+    if (score && score % 10 === 0) {
+      const winEmojis = ["🎉", "😎", "👏", "💪"];
+      const random = Math.floor(Math.random() * winEmojis.length);
+
+      id = setTimeout(() => {
+        alert(`Well done ${winEmojis[random]} your score is: ${score}!`);
+      }, 20);
+    }
+    if (count.current > 1) localStorage.setItem("score", String(score));
+    return () => clearTimeout(id);
   }, [score]);
 
   return (
@@ -90,6 +110,7 @@ const Home: NextPage = () => {
                 onClick={() => {
                   const result = confirm("Reset the score to 0?");
                   if (result) {
+                    count.current = 0;
                     setScore(0);
                     localStorage.setItem("score", "0");
                   }

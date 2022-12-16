@@ -17,6 +17,7 @@ module.exports = {
         ring2: "#253453cc",
         ring3: "#2b3956e6",
         darkBackground: "#00000080",
+        closeIconFill: "#3B4262",
 
       },
 
