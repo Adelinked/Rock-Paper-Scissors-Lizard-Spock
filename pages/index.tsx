@@ -41,7 +41,7 @@ const Home: NextPage = () => {
       const highestScoreStored = localStorage.getItem("highestScore");
       const highestScore = highestScoreStored ? Number(highestScoreStored) : 0;
       if (count.current > 1 && score > highestScore) {
-        localStorage.setItem("highestSscore", String(score));
+        localStorage.setItem("highestScore", String(score));
         id = setTimeout(() => {
           alert(`Well done ${winEmojis[random]} your score is: ${score}!`);
         }, 20);
