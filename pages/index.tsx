@@ -38,10 +38,14 @@ const Home: NextPage = () => {
     if (score && score % 10 === 0) {
       const winEmojis = ["🎉", "😎", "👏", "💪"];
       const random = Math.floor(Math.random() * winEmojis.length);
-
-      id = setTimeout(() => {
-        alert(`Well done ${winEmojis[random]} your score is: ${score}!`);
-      }, 20);
+      const highestScoreStored = localStorage.getItem("highestScore");
+      const highestScore = highestScoreStored ? Number(highestScoreStored) : 0;
+      if (count.current > 1 && score > highestScore) {
+        localStorage.setItem("highestSscore", String(score));
+        id = setTimeout(() => {
+          alert(`Well done ${winEmojis[random]} your score is: ${score}!`);
+        }, 20);
+      }
     }
     if (count.current > 1) localStorage.setItem("score", String(score));
     return () => clearTimeout(id);
