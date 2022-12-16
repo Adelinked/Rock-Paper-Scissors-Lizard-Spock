@@ -12,15 +12,21 @@ const ResultState: React.FC<{
   const [renderResult, setRenderResult] = useState("");
 
   useEffect(() => {
-    setTimeout(() => setRenderOponent(result[1]), 800);
-    setTimeout(() => {
+    const id1 = setTimeout(() => setRenderOponent(result[1]), 800);
+    const id2 = setTimeout(() => {
       setRenderResult(result[0]);
     }, 1600);
+    return () => {
+      clearTimeout(id1);
+      clearTimeout(id2);
+    };
   }, []);
 
   useEffect(() => {
-    if (renderResult !== "WIN") return;
-    setScore((curr: number) => curr + 1);
+    if (renderResult === "DRAW") return;
+    if (renderResult === "WIN") setScore((curr: number) => curr + 1);
+    else if (renderResult === "LOSE")
+      setScore((curr: number) => (curr === 0 ? 0 : curr - 1));
   }, [renderResult]);
 
   const playerInsideClass =
