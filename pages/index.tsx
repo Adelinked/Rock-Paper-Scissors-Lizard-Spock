@@ -117,6 +117,10 @@ const Home: NextPage = () => {
                     count.current = 0;
                     setScore(0);
                     localStorage.setItem("score", "0");
+                    const highestScoreStored =
+                      localStorage.getItem("highestScore");
+                    if (highestScoreStored)
+                      localStorage.setItem("highestScore", "0");
                   }
                 }}
                 className=" px-10 py-4 border-2 text-xl tracking-widest cursor-pointer rounded-lg border-headerOutline hover:text-headerOutline hover:bg-white"

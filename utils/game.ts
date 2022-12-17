@@ -14,10 +14,12 @@ const evaluateResult = (choice: string) => {
     case "spock":
       if (oc === "scissors" || oc === "rock") result = "WIN";
       else result = "LOSE";
+
       break;
     case "scissors":
       if (oc === "paper" || oc === "lizard") result = "WIN";
       else result = "LOSE";
+
       break;
     case "paper":
       if (oc === "rock" || oc === "spock") result = "WIN";
