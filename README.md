@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](https://i.postimg.cc/7LQvk04M/localhost-3000-7.png)
+![](https://i.postimg.cc/k5sCpLq6/localhost-3001.png)
 
 ### Links
 
 - Solution URL: [solution](https://github.com/Adelinked/Rock-Paper-Scissors-Lizard-Spock)
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Live Site URL: [live site](https://adelinked-rock-paper-scissors.netlify.app/)
 
 ## My process
 
