@@ -1,5 +1,16 @@
+import { memo } from "react";
 import Choice from "../Choice";
 
+const choices = ["scissors", "paper", "rock", "lizard", "spock"];
+const position: { [index: string]: string } = {
+  scissors: "left-[calc(50%-3rem)] sm:left-[calc(50%-4.5rem)]",
+  paper:
+    "left-[calc(80%-2rem)] top-[25%] sm:left-[calc(80%-2rem)] sm:top-[25%]",
+  rock: "left-[calc(70%-2rem)] bottom-0 sm:left-[calc(70%-2rem)]",
+  lizard: "left-[calc(20%-2rem)] bottom-0 sm:left-[calc(20%-2rem)]",
+  spock:
+    "left-[calc(10%-2rem)] top-[25%] sm:left-[calc(10%-2rem)] sm:top-[25%]",
+};
 const InitialState: React.FC<{
   setChoice: (choice: string) => void;
   setGameState: (state: string) => void;
@@ -12,42 +23,18 @@ const InitialState: React.FC<{
     setGameState("Result");
   };
   return (
-    <div className="  playDivBg w-[334px] sm:w-[666px] h-full relative min-w-[320px] sm:min-w-[666px]">
-      <Choice
-        insideClass={`scissorsBg choiceInside ${initInsideClass}`}
-        outsideClass={`scissorsBorder choiceOutside ${initOutsideClass} left-[calc(50%-3rem)] sm:left-[calc(50%-4.5rem)]`}
-        handleChoice={handleChoice}
-        id="scissors"
-      />
-
-      <Choice
-        insideClass={`paperBg choiceInside ${initInsideClass}`}
-        outsideClass={`paperBorder choiceOutside ${initOutsideClass} left-[calc(80%-2rem)] top-[25%] sm:left-[calc(80%-2rem)] sm:top-[25%]`}
-        handleChoice={handleChoice}
-        id="paper"
-      />
-
-      <Choice
-        insideClass={`rockBg choiceInside ${initInsideClass}`}
-        outsideClass={`rockBorder choiceOutside ${initOutsideClass} left-[calc(70%-2rem)] bottom-0 sm:left-[calc(70%-2rem)] `}
-        handleChoice={handleChoice}
-        id="rock"
-      />
-
-      <Choice
-        insideClass={`lizardBg choiceInside ${initInsideClass}`}
-        outsideClass={`lizardBorder choiceOutside ${initOutsideClass} left-[calc(20%-2rem)] bottom-0 sm:left-[calc(20%-2rem)] `}
-        handleChoice={handleChoice}
-        id="lizard"
-      />
-      <Choice
-        insideClass={`spockBg choiceInside ${initInsideClass}`}
-        outsideClass={`spockBorder choiceOutside ${initOutsideClass} left-[calc(10%-2rem)] top-[25%] sm:left-[calc(10%-2rem)] sm:top-[25%]`}
-        handleChoice={handleChoice}
-        id="spock"
-      />
+    <div className="playDivBg w-[334px] sm:w-[666px] h-full relative min-w-[320px] sm:min-w-[666px]">
+      {choices.map((i) => (
+        <Choice
+          insideClass={`${i}Bg choiceInside ${initInsideClass}`}
+          outsideClass={`${i}Border choiceOutside ${initOutsideClass} ${position[i]}`}
+          handleChoice={handleChoice}
+          id={i}
+          key={i}
+        />
+      ))}
     </div>
   );
 };
 
-export default InitialState;
+export default memo(InitialState);

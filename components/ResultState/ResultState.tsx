@@ -17,7 +17,6 @@ const ResultState: React.FC<{
       setRenderResult(result[0]);
       updateScore(result[0]);
     }, 1600);
-
     return () => {
       clearTimeout(id1);
       clearTimeout(id2);

@@ -14,6 +14,7 @@ const Home: NextPage = () => {
   const [choice, setChoice] = useState("");
   const [gameState, setGameState] = useState("Initial");
   const count = useRef(0);
+
   useEffect(() => {
     setScore(Number(localStorage.getItem("score")));
     count.current = 0;
