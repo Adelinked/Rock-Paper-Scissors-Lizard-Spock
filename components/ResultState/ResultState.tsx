@@ -15,19 +15,21 @@ const ResultState: React.FC<{
     const id1 = setTimeout(() => setRenderOponent(result[1]), 800);
     const id2 = setTimeout(() => {
       setRenderResult(result[0]);
+      updateScore(result[0]);
     }, 1600);
+
     return () => {
       clearTimeout(id1);
       clearTimeout(id2);
     };
   }, []);
 
-  useEffect(() => {
-    if (renderResult === "DRAW") return;
-    if (renderResult === "WIN") setScore((curr: number) => curr + 1);
-    else if (renderResult === "LOSE")
+  const updateScore = (result: string) => {
+    if (result === "DRAW") return;
+    if (result === "WIN") setScore((curr: number) => curr + 1);
+    else if (result === "LOSE")
       setScore((curr: number) => (curr === 0 ? 0 : curr - 1));
-  }, [renderResult]);
+  };
 
   const playerInsideClass =
     "w-[6.2rem] h-[6.2rem]  lg:w-[14.5rem] lg:h-[14.5rem]";

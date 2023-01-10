@@ -18,14 +18,9 @@ const Home: NextPage = () => {
     setScore(Number(localStorage.getItem("score")));
     count.current = 0;
   }, []);
-  useEffect(() => {
-    if (choice === "") return;
-    setGameState("Result");
-  }, [choice]);
 
   useEffect(() => {
     count.current++;
-    console.log(count.current);
     let id: ReturnType<typeof setTimeout>;
     if (score === 0) {
       if (localStorage.getItem("score") && count.current > 1)
@@ -83,7 +78,7 @@ const Home: NextPage = () => {
       <main>
         {gameState === "Initial" ? (
           <div className="flex items-center justify-center  h-[20rem]  sm:h-[30rem]  ">
-            <InitiaState setChoice={setChoice} />
+            <InitiaState setChoice={setChoice} setGameState={setGameState} />
           </div>
         ) : null}
 
