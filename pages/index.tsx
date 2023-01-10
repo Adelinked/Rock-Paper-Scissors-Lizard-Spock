@@ -6,13 +6,11 @@ import InitiaState from "../components/InitiaState";
 import ResultState from "../components/ResultState";
 import RulesComponent from "../components/RulesComponent";
 import LogoBonus from "../components/LogoBonus";
-import evaluateResult from "../utils/game";
 
 const Home: NextPage = () => {
   const [score, setScore] = useState(0);
   const [showRules, setShowRules] = useState(false);
   const [choice, setChoice] = useState("");
-  const [gameState, setGameState] = useState("Initial");
   const count = useRef(0);
 
   useEffect(() => {
@@ -77,24 +75,20 @@ const Home: NextPage = () => {
       </header>
       <div className="py-20 sm:py-10" />
       <main>
-        {gameState === "Initial" ? (
+        {choice == "" ? (
           <div className="flex items-center justify-center  h-[20rem]  sm:h-[30rem]  ">
-            <InitiaState setChoice={setChoice} setGameState={setGameState} />
+            <InitiaState setChoice={setChoice} />
           </div>
-        ) : null}
-
-        {gameState === "Result" ? (
+        ) : (
           <div className="  h-[20rem] w-[310px] sm:w-[750px] lg:w-full   sm:h-[30rem]  ">
             {" "}
             <ResultState
               choice={choice}
               setChoice={setChoice}
-              result={evaluateResult(choice)}
-              setGameState={setGameState}
               setScore={setScore}
             />
           </div>
-        ) : null}
+        )}
 
         <div className="flex flex-col sm:flex-row items-center justify-end lg:w-[1100px] sm:pr-8  ">
           <div className="py-32 sm:p-0 " />

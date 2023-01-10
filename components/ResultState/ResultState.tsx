@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import Choice from "../Choice";
+import evaluateResult from "../../utils/game";
 
 const ResultState: React.FC<{
   choice: string;
-  result: string[];
-  setGameState: (state: string) => void;
   setChoice: (choice: string) => void;
   setScore: Function;
-}> = ({ choice, result, setGameState, setChoice, setScore }) => {
+}> = ({ choice, setChoice, setScore }) => {
   const [renderOponent, setRenderOponent] = useState("");
   const [renderResult, setRenderResult] = useState("");
-
+  const result = evaluateResult(choice);
   useEffect(() => {
     const id1 = setTimeout(() => setRenderOponent(result[1]), 800);
     const id2 = setTimeout(() => {
@@ -56,7 +55,6 @@ const ResultState: React.FC<{
             <button
               onClick={() => {
                 setChoice("");
-                setGameState("Initial");
               }}
               className=" w-full rounded-lg bg-white text-darkText py-4 tracking-widest text-xl hover:bg-darkText hover:text-white border-2 border-transparent hover:border-white"
             >

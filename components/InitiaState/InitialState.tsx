@@ -13,14 +13,12 @@ const position: { [index: string]: string } = {
 };
 const InitialState: React.FC<{
   setChoice: (choice: string) => void;
-  setGameState: (state: string) => void;
-}> = ({ setChoice, setGameState }) => {
+}> = ({ setChoice }) => {
   const initInsideClass =
     "w-[5rem] h-[5rem] sm:w-[8.5rem] sm:h-[8.5rem] cursor-pointer hover:bg-blue-300 active:bg-yellow-300";
   const initOutsideClass = "border-[0.8rem] sm:border-[1rem] absolute z-[0]";
   const handleChoice = (e: any) => {
     setChoice(e.target.id);
-    setGameState("Result");
   };
   return (
     <div className="playDivBg w-[334px] sm:w-[666px] h-full relative min-w-[320px] sm:min-w-[666px]">
