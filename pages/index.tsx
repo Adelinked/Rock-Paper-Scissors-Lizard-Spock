@@ -7,16 +7,15 @@ import ResultState from "../components/ResultState";
 import RulesComponent from "../components/RulesComponent";
 import LogoBonus from "../components/LogoBonus";
 
+let initialScore: number = 0;
+if (typeof window !== "undefined")
+  initialScore = Number(localStorage.getItem("score"));
+
 const Home: NextPage = () => {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(initialScore);
   const [showRules, setShowRules] = useState(false);
   const [choice, setChoice] = useState("");
   const count = useRef(0);
-
-  useEffect(() => {
-    setScore(Number(localStorage.getItem("score")));
-    count.current = 0;
-  }, []);
 
   useEffect(() => {
     count.current++;
