@@ -9,9 +9,9 @@ const barlow = Barlow_Semi_Condensed({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={barlow.className}>
+    <div className={barlow.className}>
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }
 

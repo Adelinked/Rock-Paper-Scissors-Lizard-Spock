@@ -122,7 +122,7 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer role="contentinfo" className="attribution">
+      <footer className="attribution">
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io?ref=challenge"
